@@ -1,0 +1,665 @@
+:root {
+    --main-color: #3399ff;
+    --line-color: #c9c9c9;
+    --line-color2: #a9a9a9;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    /* height: 120px; */
+    margin-left: 0;
+    /* border: 1px solid #a9a9a9; */
+    z-index: 99;
+}
+
+
+/* 헤더 첫 번째 줄 (시작) */
+.nav1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .nav1_left, .nav1_center {
+    border-right: 1px solid #c9c9c9;
+} */
+
+.nav1_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav1_left a {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nav1_left a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav1_center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1_center .search {
+    width: 380px;
+    height: 38px;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color2);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav1_center .search:focus {
+    border: 2px solid var(--main-color);
+    opacity: 0.6; /* 색상 투명도 조절 */
+}
+
+.nav1_center button {
+    position: absolute;
+    transform: translateX(1200%);
+    background-color: transparent;
+    border: none;
+}
+
+.nav1_center button:hover {
+    color: var(--main-color);
+}
+
+/* .nav1_center button:active {
+    color: var(--main-color);
+} */
+
+.nav1_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav1_right .link_wrap {
+    margin-right: 100px;
+}
+
+.nav1_right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav1_right a:hover {
+    color: var(--main-color);
+}
+/* 헤더 첫 번째 줄 (끝) */
+
+
+/* 헤더 두 번째 줄 (시작) */
+.nav2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px var(--line-color);
+    opacity: 0.8;
+}
+
+.nav2_left {
+    margin-left: 100px;
+}
+
+.nav2_left a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav2_left a:hover {
+    color: var(--main-color);
+}
+
+.nav2_left .hire {
+    color: var(--main-color);
+}
+
+.nav2_right {
+    margin-right: 100px;
+}
+
+.nav2_right .customer {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav2_right .customer:hover {
+    color: var(--main-color);
+}
+/* 헤더 두 번째 줄 (끝) */
+
+/* 이력서 디자인 */
+.resume_title{
+    text-align: center;
+    letter-spacing: 10px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.resume_content{
+    margin: auto;
+    width: 850px;
+    height: 220px;
+    border: #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    /* border-bottom: solid 1px #c9c9c9; */
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+}
+
+.resume_content td{
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.picture{
+    width: 220px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.pic_register{
+    margin-left: 65px;
+    margin-top: 180px;
+    background-color: #c9c9c9;
+    cursor: pointer;
+}
+
+.phone_number{
+    /* width: 94px; */
+    font-weight: 600;
+}
+
+.user_name{
+    width: 130px;
+    text-align: left;
+    font-weight: 600;
+    border-right: none;
+    height: 55px;
+}
+
+.username_input{
+    /* width: 150px; */
+    border-left: none;
+    border-right: none;
+}
+
+.person_number{
+    width: 100px;
+    text-align: left;
+    font-weight: 600;
+    border-right: none;
+    height: 55px;
+}
+
+.personnumber_input{
+    border-left: none;
+    border-right: none;
+}
+
+.personnumber_box{
+    height: 35px;
+    width: 150px;
+}
+
+.user_email{
+    width: 130px;
+    font-weight: 600;
+    border-right: none;
+    height: 100px;
+}
+
+.useraddress_input{
+    border-left: none;
+    height: 55px;
+}
+
+.address{
+    height: 55px;
+    font-weight: 600;
+}
+
+.user_address{
+    width: 130px;
+    height: 35px;
+    margin-bottom: 2px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.useraddress_box{
+    height: 35px;
+    width: 450px;
+}
+
+.user_phone{
+    border-right: none;
+    width: 130px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.userphone_input{
+    border-left: none;
+    height: 55px;
+}
+
+.phonenumberbox{
+    height: 35px;
+    width: 300px;
+}
+
+.person_number{
+    /* width: 80px; */
+    border-left: none;
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+}
+
+.person_number_input{
+    border-left: none;
+    /* width: 180px; */
+}
+
+.email{
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+    text-align: left;
+}
+
+.email_input{
+    border-left: none;
+    border-right: none;
+}
+
+.disorder_type{
+    border-left: none;
+    border-right: none;
+    font-weight: 600;
+}
+
+.disorder_type_input{
+    border-left: none;
+}
+
+.resume_content_2{
+    margin: auto;
+    margin-top: 10px;
+    width: 850px;
+    height: 250px;
+    border: #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    border-left: none;
+    border-right: none;
+    border-collapse: collapse;
+}
+
+.resume_content_2 td{
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.study{
+    position: relative;
+    /* text-align: left; */
+    font-weight: 600;
+    /* font-size: 25px; */
+    margin-left: 333px;
+    margin-top: 20px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.time{
+    font-weight: 600;
+    text-align: center;
+    width: 300px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.time_input{
+    height: 65.78px;
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+}
+
+.school{
+    font-weight: 600;
+    text-align: center;
+    width: 300px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.major{
+    font-weight: 600;
+    text-align: center;
+    width: 300px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.major_input{
+    width: 300px;
+    text-align: center;
+}
+
+.majorbox{
+    width: 120px;
+    height: 35px;
+}
+
+.school_input{
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+}
+
+.score{
+    font-weight: 600;
+    text-align: center;
+    width: 120px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.score_input{
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+}
+
+.graduate{
+    font-weight: 600;
+    text-align: center;
+    width: 120px;
+}
+
+.graduate_input{
+    text-align: center;
+}
+
+.timebox{
+    height: 35px;
+    width: 75px;
+}
+
+.schoolbox{
+    height: 35px;
+    width: 120px;
+}
+
+.scorebox{
+    height: 35px;
+    width: 65px;
+}
+
+.graduate_yn{
+    height: 35px;
+}
+
+.career{
+    position: relative;
+    margin-left: 333px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.resume_content_3{
+    margin: auto;
+    margin-top: 10px;
+    width: 850px;
+    height: 250px;
+    border: #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    border-left: none;
+    border-right: none;
+    border-collapse: collapse;
+}
+
+.resume_content_3 td{
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.career_time{
+    font-weight: 600;
+    text-align: center;
+    width: 300px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.career_time_input{
+    height: 65.78px;
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+    width: 300px;
+}
+
+.companybox{
+    height: 35px;
+    width: 360px;
+    text-align: center;
+}
+
+.company{
+    font-weight: 600;
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+    width: 400px;
+}
+
+.company_input{
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+    width: 400px;
+}
+
+.position{
+    font-weight: 600;
+    text-align: center;
+    width: 113px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.position_input{
+    text-align: center;
+    border-right: solid 1px #c9c9c9;
+}
+
+.positionbox{
+    height: 35px;
+    width: 65px;
+}
+
+.retire{
+    width: 113px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.retire_input{
+    text-align: center;
+}
+
+.retirebox{
+    height: 35px;
+    width: 65px;
+}
+
+/* 희망사항 */
+.hope_list{
+    position: relative;
+    margin-left: 333px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.resume_content_4{
+    margin: auto;
+    margin-top: 10px;
+    width: 850px;
+    height: 250px;
+    border: #c9c9c9;
+    border-left: none;
+    border-right: none;
+    border-top: solid 2px #c9c9c9;
+    border-collapse: collapse;
+}
+
+.resume_content_4 td{
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.hope_job{
+    width: 151px;
+    height: 53.5px;
+    font-weight: 600;
+    /* text-align: center; */
+    border-right: solid 1px #c9c9c9;
+}
+
+.hope_pay{
+    font-weight: 600;
+    /* text-align: center; */
+    height: 53.5px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.hope_area{
+    font-weight: 600;
+    /* text-align: center; */
+    height: 53.5px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.hire_type{
+    font-weight: 600;
+    /* text-align: center; */
+    height: 53.5px;
+    border-right: solid 1px #c9c9c9;
+}
+
+.hiretype_box{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.hopejob_box{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.hopepay_box{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.area_box{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.koyong{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.sido{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.jikjong{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+.yeonbong{
+    height: 35px;
+    width: 500px;
+    margin-left: 25px;
+}
+
+/* 버튼디자인 */
+.buttons{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.register{
+    width: 150px;
+    height: 50px;
+    color: white;
+    font-weight: 500;
+    font-size: 30px;
+    background-color: #3399ff;
+    cursor: pointer;
+    border: none;
+}
+
+.cancle{
+    width: 150px;
+    height: 50px;
+    background-color: white;
+    color: #c9c9c9;
+    border: solid 1px lightgray;
+    font-weight: 500;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.edit_bt{
+    height: 35px;
+    width: 55px;
+    background-color: #3399ff;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    border: none;
+    cursor: pointer;
+    margin-left: 1130px;
+    margin-top: 10px;
+}

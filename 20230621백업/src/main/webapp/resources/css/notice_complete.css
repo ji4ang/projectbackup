@@ -1,0 +1,550 @@
+:root {
+    --main-color: #3399ff;
+    --line-color: #c9c9c9;
+    --line-color2: #a9a9a9;
+    --line-color3: #e0e2e6;
+    --font-color: #333;
+    --font-color2: #555;
+    --font-color3: #666;
+    --font-color4: #777;
+    --scrollbar: #d8dbe2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    margin-left: 0;
+    z-index: 99;
+}
+
+
+/* 헤더 첫 번째 줄 (시작) */
+.nav1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav1_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav1_left a {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nav1_left a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav1_center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1_center .search {
+    width: 380px;
+    height: 38px;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color2);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav1_center .search:focus {
+    border: 2px solid var(--main-color);
+    opacity: 0.6; /* 색상 투명도 조절 */
+}
+
+.nav1_center button {
+    position: absolute;
+    transform: translateX(1200%);
+    background-color: transparent;
+    border: none;
+}
+
+.nav1_center button:hover {
+    color: var(--main-color);
+}
+
+/* .nav1_center button:active {
+    color: var(--main-color);
+} */
+
+.nav1_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav1_right .link_wrap {
+    margin-right: 100px;
+}
+
+.nav1_right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav1_right a:hover {
+    color: var(--main-color);
+}
+/* 헤더 첫 번째 줄 (끝) */
+
+
+/* 헤더 두 번째 줄 (시작) */
+.nav2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px var(--line-color);
+    opacity: 0.8;
+}
+
+.nav2_left {
+    margin-left: 100px;
+}
+
+.nav2_left a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav2_left a:hover {
+    color: var(--main-color);
+}
+
+.nav2_left .hire {
+    color: var(--main-color);
+}
+
+.nav2_right {
+    margin-right: 100px;
+}
+
+.nav2_right .customer {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav2_right .customer:hover {
+    color: var(--main-color);
+}
+/* 헤더 두 번째 줄 (끝) */
+
+.notice_title{
+    text-align: center;
+    letter-spacing: 10px;
+    margin: 40px 0;
+}
+
+.notice_content{
+    margin: auto;
+    width: 850px;
+    height: 250px;
+    border-bottom: solid 2px #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+}
+
+.notice_content td{
+    border-bottom: solid 1px #c9c9c9;
+}
+
+.logo{
+    width: 165px;
+}
+
+.logo_register{
+    margin-left: 55px;
+    margin-top: 200px;
+    background-color: #c9c9c9;
+    cursor: pointer;
+}
+
+.businessname{
+    width: 150px;
+    text-align: left;
+    font-weight: 600;
+    border-right: none;
+    height: 55px;
+}
+
+.business_name_input{
+    border-left: none;
+    border-right: none;
+    height: 55px;
+}
+
+.business_idx{
+    border-left: none;
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+    text-align: left;
+}
+
+.business_idx_input{
+    border-left: none;
+    height: 55px;
+}
+
+.business_boss{
+    font-weight: 600;
+    border-right: none;
+    text-align: left;
+}
+
+.business_boss_input{
+    border-left: none;
+    height: 55px;
+}
+
+.business_boss_box{
+    height: 35px;
+    width: 125px;
+}
+
+.business_number{
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+    text-align: left;
+}
+
+.business_number_input{
+    border-left: none;
+    height: 55px;
+}
+
+.business_number_box{
+    height: 35px;
+    width: 125px;
+}
+
+.businesscategory{
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+    text-align: left;
+}
+
+.businesscategory_input{
+    border-left: none;
+    height: 55px;
+}
+
+.businesscategory_box{
+    height: 35px;
+    width: 250px;
+}
+
+.businessaddress{
+    border-right: none;
+    font-weight: 600;
+    height: 55px;
+    text-align: left;
+}
+
+.businessaddress_input{
+    border-left: none;
+    height: 55px;
+}
+
+.businessaddress_box{
+    height: 35px;
+    width: 250px;
+}
+
+.hire_information{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.notice_content_2{
+    margin: auto;
+    margin-top: 10px;
+    width: 850px;
+    height: 125px;
+    border-bottom: solid 2px #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+}
+
+/*.notice_content_2 td{
+    border: solid 1px #c9c9c9;
+}*/
+
+.hirecategory{
+    width: 190px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    text-align: center;
+}
+
+.hirecategory_input{
+    width: 190px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    text-align: center;
+    border-bottom: solid 1px #c9c9c9;
+    border-top: solid 1px #c9c9c9;
+}
+
+.hirecategory_box{
+    height: 35px;
+    width: 150px;
+}
+
+.hiretype{
+    width: 132px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    text-align: center;
+}
+
+.hiretype_input{
+    width: 132px;
+    height: 55px;
+    border-left: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    text-align: center;
+    border-top: solid 1px #c9c9c9;
+
+}
+
+.hiretype_box{
+    height: 35px;
+    width: 100px;
+}
+
+.salarytype{
+    width: 132px;
+    height: 55px;
+    border-left: solid 1px #c9c9c9;
+    /* border-right: solid 1px #c9c9c9; */
+
+    text-align: center;
+}
+
+.salarytype_input{
+    width: 132px;
+    height: 55px;
+    border-left: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    text-align: center;
+    border-top: solid 1px #c9c9c9;
+
+}
+
+.salarytype_box{
+    width: 100px;
+    height: 35px;
+}
+
+.salary{
+    width: 132px;
+    height: 55px;
+    border-left: solid 1px #c9c9c9;
+    text-align: center;
+}
+
+.salary_input{
+    width: 132px;
+    height: 55px;
+    border-left: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    text-align: center;
+    border-top: solid 1px #c9c9c9;
+
+}
+
+.salary_box{
+    width: 100px;
+    height: 35px;
+}
+
+.requirementcareer{
+    width: 132px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    text-align: center;
+}
+
+.requirementcareer_input{
+    width: 132px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    border-left: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    text-align: center;
+    border-top: solid 1px #c9c9c9;
+
+}
+
+.requirementcareer_box{
+    width: 100px;
+    height: 35px;
+}
+
+.requirementedu{
+    width: 132px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    text-align: center;
+}
+
+.requirementedu_input{
+    width: 132px;
+    height: 55px;
+    border-right: solid 1px #c9c9c9;
+    border-left: solid 1px #c9c9c9;
+    border-bottom: solid 1px #c9c9c9;
+    text-align: center;
+    border-top: solid 1px #c9c9c9;
+}
+
+.requirementedu_box{
+    width: 100px;
+    height: 35px;
+}
+
+.apply_information{
+    font-size: 22px;
+    font-weight: 600;
+    text-align: left;
+    margin-top: 60px;
+    margin-bottom: 20px;
+}
+
+.notice_content_3{
+    margin: auto;
+    margin-top: 10px;
+    width: 850px;
+    height: 125px;
+    border-bottom: solid 2px #c9c9c9;
+    border-top: solid 2px #c9c9c9;
+    border-right: none;
+    border-left: none;
+    border-collapse: collapse;
+}
+
+.notice_content_3 tr {
+    border-bottom: 1px solid #c9c9c9;
+}
+
+.notice_content_3 tr td:nth-child(1) {
+    border-right: 1px solid #c9c9c9;
+}
+
+.notice_regdate{
+    width: 425px;
+    height: 55px;
+    text-align: center;
+
+}
+
+.noticeregdate_input{
+    width: 425px;
+    height: 55px;
+    text-align: center;
+
+}
+
+.notice_period{
+    width: 425px;
+    height: 55px;
+    text-align: center;
+    border-right: none;
+}
+
+.noticeperiod_input{
+    width: 425px;
+    height: 55px;
+    text-align: center;
+    border-right: none;
+}
+
+.noticeperiod_box{
+    height: 40px;
+    width: 200px;
+}
+
+/* 버튼디자인 */
+.buttons{
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px;
+}
+
+.apply{
+    width: 120px;
+    height: 40px;
+    color: white;
+    font-weight: 500;
+    font-size: 20px;
+    letter-spacing: -2px;
+    background-color: #3399ff;
+    cursor: pointer;
+    border: none;
+}
+
+.chat{
+    width: 120px;
+    height: 40px;
+    background-color: white;
+    border: solid 1px #a9a9a9;
+    letter-spacing: -2px;
+    font-weight: 500;
+    font-size: 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.chat a {
+    text-decoration: none;
+    color: #777;
+}

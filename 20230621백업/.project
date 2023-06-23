@@ -51,26 +51,6 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>src/main/webapp/resources/css/notice.css</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/notice/notice.css</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/css/notice_complete.css</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/notice%20(1)/notice/notice_complete.css</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/css/resume.css</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/resume.css</locationURI>
-		</link>
-		<link>
-			<name>src/main/webapp/resources/img/logo.png</name>
-			<type>1</type>
-			<locationURI>copy_PARENT/Desktop/logo.png</locationURI>
-		</link>
-		<link>
 			<name>src/main/java/jisang/poyong/controller/SurveyController.java</name>
 			<type>1</type>
 			<locationURI>copy_PARENT/Documents/%EC%B9%B4%EC%B9%B4%EC%98%A4%ED%86%A1%20%EB%B0%9B%EC%9D%80%20%ED%8C%8C%EC%9D%BC/%EC%9D%B4%EC%82%AC%EC%A4%80%EB%B9%84/controller/SurveyController.java</locationURI>
