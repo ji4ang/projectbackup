@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://mybatis.org/schema/mybatis-spring http://mybatis.org/schema/mybatis-spring.xsd
+   http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd"
+   xmlns:mybatis-spring="http://mybatis.org/schema/mybatis-spring"
+   >
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<!-- com.zaxxer.hikari.HikariConfig.class -->
+	<bean id="hikariConfig" class="com.zaxxer.hikari.HikariConfig">
+	    <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
+	    <property name="jdbcUrl" value="jdbc:mysql:// project-db-cgi.smhrd.com:3307/poyong?useSSL=false&amp;serverTimezone=UTC" />
+	    <property name="username" value="poyong" />
+	    <property name="password" value="smhrd1234" />
+	</bean>
+	<!-- com.zaxxer.hikari.HikariConfig.class 
+		위의 환경설정대로 Connection Poll을 만드는 역할
+	-->
+	<bean id="dataSource" class="com.zaxxer.hikari.HikariDataSource">
+	    <constructor-arg ref="hikariConfig" />
+	
+	<!-- BoardMapper interface의 구현 클래스 생성
+		 SqlSessionFactoryBean 생성
+		 org.mybatis.spring.SqlSessionFactoryBean.class
+	 -->
+	</bean>
+		
+	 <bean class="org.mybatis.spring.SqlSessionFactoryBean">
+	     <property name="dataSource" ref="dataSource" />
+	 </bean>
+	 
+	 <!-- BoardMapper interface들을 메모리에 올림(scan) -->
+	 <mybatis-spring:scan base-package="jisang.poyong.mapper"/>
+	 
+</beans>

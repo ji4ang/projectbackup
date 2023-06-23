@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>포용취업넷</title>
+    <link rel="stylesheet" href="css/resume.css">
+</head>
+
+<body>
+    <header>
+        <!-- 헤더 첫 번째 줄 (시작)-->
+        <div class="nav1">
+            <div class="nav1_left">
+                <a href="#"> <!-- 메인페이지 링크 --> <img src="${path}/resources/img/logo.png" alt="logo">포용취업넷</a>
+            </div>
+
+            <div class="nav1_center">
+                <input type="text" class="search">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+
+            <div class="nav1_right">
+                <div class="link_wrap">
+                    <!-- 로그인 전에는 "로그인, 회원가입" 버튼만 보이게, 나머지는 숨김 처리 -->
+                    <c:choose>
+                        <c:when test="${not empty SignIn}">
+                            <c:choose>
+                                <c:when test="${String.valueOf(SignIn.userdiv) eq 'A'}">
+                                    <a href="${path}/UserMyinfo.do" class="myPage">내정보</a>
+                                </c:when>
+                                <c:when test="${String.valueOf(SignIn.userdiv) eq 'B'}">
+                                    <a href="${path}/CompanyMyinfo.do" class="myPage">내정보</a>
+                                </c:when>
+                            </c:choose>
+                            <a href="${path}/ChatPage.do" class="message">쪽지함</a>
+                            <a href="${path}/Logout.do" class="LogOutBtn">로그아웃</a>
+                        </c:when>
+                        <c:otherwise>
+                            <!-- 로그인 세션값이 없는 경우 -->
+                            <div class="SignUp_nav">
+                                <a href="${path}/SignIn.do" class="siBtn">로그인</a> <a href="${path}/SignUp.do"
+                                    class="suBtn">회원가입</a>
+                            </div>
+                        </c:otherwise>
+                    </c:choose>
+                </div>
+            </div>
+        </div>
+        <!-- 헤더 첫 번째 줄 (끝) -->
+
+
+        <!-- 헤더 두 번째 줄 (시작) -->
+        <div class="nav2">
+            <div class="nav2_left">
+                <a href="${path}/MainPage.do" class="hire">채용정보</a> <a href="${path}/Chart.do" class="job">취업 분포도</a> <a
+                    href="${path}/Career.do" class="career">직업·진로</a>
+                <c:choose>
+                    <c:when test="${not empty SignIn}">
+                        <c:choose>
+                            <c:when test="${String.valueOf(SignIn.userdiv) eq 'A'}">
+                                <a href="${path}/Resume.do" class="resume">이력서 작성</a>
+                            </c:when>
+                            <c:when test="${String.valueOf(SignIn.userdiv) eq 'B'}">
+                                <a href="${path}/business.do" class="resume">공고글 작성</a>
+                            </c:when>
+                        </c:choose>
+                    </c:when>
+                </c:choose>
+            </div>
+
+            <div class="nav2_right">
+                <a href="#" class="customer">고객센터</a>
+                <!-- 고객센터 페이지 링크 -->
+            </div>
+        </div>
+        <!-- 헤더 두 번째 줄 (끝) -->
+    </header>
+    <!-- 이력서 시작 -->
+    <div class="resume_wrapper">
+        <form action="#" method="get">
+            <h1 class="resume_title">이력서</h1>
+            <!-- 인적사항 입력페이지 -->
+            <table class="resume_content" border="1" cellspacing="0">
+                <tr>
+                    <td class="picture" rowspan="4"><button class="pic_register">사진파일
+                            등록</button></td>
+                    <td class="name">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이름</td>
+                    <td class="name_input">홍길동</td>
+                    <td class="person_number">&nbsp;주민등록번호</td>
+                    <td class="person_number_input"><input type="password" class="jumin1">&nbsp;-&nbsp;<input
+                            type="password" class="jumin2">******</td>
+                </tr>
+                <tr>
+                    <td class="address">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;주소</td>
+                    <td class="address_input" colspan="3"><input class="big_address" type="text"> <br>
+                        <input class="small_address" type="text" placeholder="&nbsp;(상세주소)">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="phone_number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;휴대전화</td>
+                    <td class="phone_number_input" colspan="3"><input class="phonenumberbox" type="text"></td>
+                </tr>
+                <tr>
+                    <td class="email">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;이메일</td>
+                    <td class="email_input">unknown@naver.com</td>
+                    <td class="disorder_type">&nbsp;장애유형</td>
+                    <td class="disorder_type_input">청각장애</td>
+                </tr>
+            </table>
+
+            <h2 class="study">학력사항</h2>
+            <table class="resume_content_2" border="1" cellspacing="0">
+                <tr>
+                    <td class="time">기간</td>
+                    <td class="school">학교 및 전공</td>
+                    <td class="score">학점</td>
+                    <td class="graduate">졸업여부</td>
+                </tr>
+                <tr>
+                    <td class="time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="school_input">
+                        <input class="schoolbox" type="text">
+                        <input class="schoolbox" type="text">
+                    </td>
+                    <td class="score_input"><input class="scorebox" type="text"></td>
+                    <td class="graduate_input"><select class="graduate_yn">
+                            <option value="yes">졸업</option>
+                            <option value="no">미졸업</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="school_input">
+                        <input class="schoolbox" type="text">
+                        <input class="schoolbox" type="text">
+                    </td>
+                    <td class="score_input"><input class="scorebox" type="text"></td>
+                    <td class="graduate_input"><select class="graduate_yn">
+                            <option value="yes">졸업</option>
+                            <option value="no">미졸업</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="school_input">
+                        <input class="schoolbox" type="text">
+                        <input class="schoolbox" type="text">
+                    </td>
+                    <td class="score_input"><input class="scorebox" type="text"></td>
+                    <td class="graduate_input"><select class="graduate_yn">
+                            <option value="yes">졸업</option>
+                            <option value="no">미졸업</option>
+                        </select></td>
+                </tr>
+            </table>
+
+            <h2 class="career">경력사항</h2>
+            <table class="resume_content_3" border="1" cellspacing="0">
+                <tr>
+                    <td class="career_time">기간</td>
+                    <td class="company">회사명</td>
+                    <td class="position">직위</td>
+                    <td class="retire">재직여부</td>
+                </tr>
+                <tr>
+                    <td class="career_time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="company_input"><input class="companybox" type="text"></td>
+                    <td class="position_input"><input class="positionbox" type="text"></td>
+                    <td class="retire_input"><select class="retirebox">
+                            <option value="retire_y">퇴직</option>
+                            <option value="retire_n">재직</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="career_time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="company_input"><input class="companybox" type="text"></td>
+                    <td class="position_input"><input class="positionbox" type="text"></td>
+                    <td class="retire_input"><select class="retirebox">
+                            <option value="retire_y">퇴직</option>
+                            <option value="retire_n">재직</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="career_time_input">
+                        <input class="timebox" type="text"> ~
+                        <input class="timebox" type="text">
+                    </td>
+                    <td class="company_input"><input class="companybox" type="text"></td>
+                    <td class="position_input"><input class="positionbox" type="text"></td>
+                    <td class="retire_input"><select class="retirebox">
+                            <option value="retire_y">퇴직</option>
+                            <option value="retire_n">재직</option>
+                        </select></td>
+                </tr>
+            </table>
+
+            <h2 class="hope_list">희망사항</h2>
+            <table class="resume_content_4" border="1" cellspacing="0">
+                <tr>
+                    <td class="hope_job">희망직종</td>
+                    <td class="hope_job_input"><select name="select_job" class="jikjong">
+                            <option value="it">IT⦁정보통신</option>
+                            <option value="menu">제조⦁생산⦁화학업</option>
+                            <option value="building">건설업</option>
+                            <option value="media">미디어⦁광고업</option>
+                            <option value="sell">판매⦁유통업</option>
+                            <option value="education">교육업</option>
+                            <option value="midical">의료⦁제약업</option>
+                            <option value="culture">문화⦁예술⦁디자인업</option>
+                            <option value="service">서비스업</option>
+                            <option value="office">사무직</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="hope_pay">희망연봉</td>
+                    <td class="hope_pay_input"><input type="text" class="yeonbong"></td>
+                </tr>
+                <tr>
+                    <td class="hope_area">희망근무지역</td>
+                    <td class="hope_area_input"><select name="area_option" class="sido">
+                            <option value="special">특별시</option>
+                            <option value="wide">광역시</option>
+                            <option value="kyoungki">경기도</option>
+                            <option value="kangwon">강원도</option>
+                            <option value="chungnam">충청남도</option>
+                            <option value="chungbuk">충청북도</option>
+                            <option value="jeonnam">전라남도</option>
+                            <option value="jenobuk">전라북도</option>
+                            <option value="kyoungnam">경상남도</option>
+                            <option value="kyoungbuk">경상북도</option>
+                            <option value="jeju">제주도</option>
+                        </select></td>
+                </tr>
+                <tr>
+                    <td class="hire_type">고용형태</td>
+                    <td class="hire_type_input"><select name="hire_option" class="koyong">
+                            <option value="contract">계약직</option>
+                            <option value="fulltime">상용직</option>
+                            <option value="parttime">시간제</option>
+                        </select></td>
+                </tr>
+            </table>
+
+            <div class="buttons">
+                <button class="register" type="submit">등록</button>
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <button class="cancle" type="button">취소</button>
+            </div>
+
+        </form>
+    </div>
+
+    <script src="header.js"></script>
+</body>
+
+</html>

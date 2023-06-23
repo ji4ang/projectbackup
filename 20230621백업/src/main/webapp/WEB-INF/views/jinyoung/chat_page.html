@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chat_page</title>
+    <link rel="stylesheet" href="chatting.css">
+</head>
+<body>
+    <header>
+        <!-- 헤더 첫 번째 줄 (시작)-->
+        <div class="nav1">
+            <div class="nav1_left">
+                <a href="#"> <!-- 메인페이지 링크 -->
+                    <img src="img/logo.png" alt="logo">포용취업넷
+                </a>
+            </div>
+
+            <div class="nav1_center">
+                <input type="text" class="search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+            <div class="nav1_right">
+                <div class="link_wrap">
+                    <!-- 로그인 전에는 "로그인, 회원가입" 버튼만 보이게, 나머지는 숨김 처리 -->
+                    <a href="SignIn.html">로그인</a>
+                    <a href="SignUp.html">회원가입</a>
+                    <!-- 로그인 후에는 "쪽지함, 내정보, 로그아웃" 버튼만 보이게, 나머지는 숨김 처리 -->
+                    <a href="#" class="message">쪽지함</a>
+                    <a href="#" class="myPage">내정보</a>
+                    <a href="#" class="logout">로그아웃</a>
+                </div>
+            </div>
+        </div>
+        <!-- 헤더 첫 번째 줄 (끝) -->
+
+
+        <!-- 헤더 두 번째 줄 (시작) -->
+        <div class="nav2">
+            <div class="nav2_left">
+                <a href="#" class="hire">채용정보</a>
+                <a href="#">취업 분포도</a>
+                <a href="#">직업·진로</a>
+                <a href="#">이력서 작성</a>
+            </div>
+
+            <div class="nav2_right">
+                <a href="#" class="customer">고객센터</a><!-- 고객센터 페이지 링크 -->
+            </div>
+        </div>
+        <!-- 헤더 두 번째 줄 (끝) -->
+    </header>
+    <!-- 쪽지리스트 시작 -->
+    <nav class="sidebar">
+        <header>
+            <h3>쪽지</h3>
+        </header>
+        <div class="scrollbox">
+            <div class="scrollbox-inner">
+                <div class="chats_list_wrapper">
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                    <div class="chats">OO소프트</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="chat_wrapper">
+        <!-- 채팅창 시작 -->
+        <div class="chat_screen">
+            <div class="chat_screen_comments">
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">알겠습니다</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다.</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+                <div class="comment_package">
+                    <div class="comment">면접가능하신가요?</div>
+                    <div class="tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                </div>
+                <div class="comment_re_package">
+                    <div class="re_tts"><i class="fa-sharp fa-solid fa-volume-high"></i></div>
+                    <div class="comment_re">네 가능합니다</div>
+                </div>
+            </div>
+        </div>
+        <!-- 입력창 및 버튼 -->
+        <div class="write_area" method="post">
+            <form class="msg_write_area" onsubmit="return false;">
+                <textarea class="msg_writebox"></textarea>
+                <div class="bt_container">
+                    <button class="stt_bt"><i class="fa-solid fa-microphone fa-2x"></i></button>
+                    <button class="tts_bt"><i class="fa-sharp fa-solid fa-volume-high fa-2x"></i></button>
+                </div>
+                <input class="submit_bt" type="submit" value="전송">
+            </form>
+        </div>
+    </div>
+    
+    <script src="https://kit.fontawesome.com/d18a01d55c.js" crossorigin="anonymous"></script>
+    <script src="header.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>

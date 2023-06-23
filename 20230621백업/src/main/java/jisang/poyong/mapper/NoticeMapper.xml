@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jisang.poyong.mapper.NoticeMapper">
+
+	<select id="LoadNotice" parameterType="String"
+		resultType="jisang.poyong.vo.NoticeVO">
+		SELECT noticeidx, companyname, noticejobcode, noticeregdate,
+		noticeperiod
+		FROM noticeinfo
+		WHERE noticeidx > 1090
+		ORDER BY
+		noticeidx DESC
+	</select>
+
+	<select id="NoticeResult" resultType="jisang.poyong.vo.NoticeVO">
+        SELECT * FROM noticeinfo 
+        WHERE noticeidx = #{noticeIdx}
+    </select>
+	
+	<insert id="insertNotice"	parameterType="jisang.poyong.vo.NoticeVO">
+		INSERT INTO noticeinfo (
+		userid, companyname, noticejobcode, noticeemp, noticewagemode,
+		noticewage, noticejoinmode, noticecareer, noticeedu,
+		companyaddress, noticeregdate, noticeperiod, noticejob, businessboss, businessmember,
+		businesscode)
+		VALUES (
+		#{userid}, #{companyname}, #{noticejobcode}, #{noticeemp},
+		#{noticewagemode}, #{noticewage}, #{noticejoinmode},
+		#{noticecareer}, #{noticeedu}, #{companyaddress},
+		#{noticeregdate}, #{noticeperiod} , '', #{businessboss}, #{businessmember} , #{businesscode}
+		)
+	</insert>
+
+</mapper>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jisang.poyong.mapper.ChatMapper">
+
+	<insert id="SendChat" parameterType="jisang.poyong.vo.ChatVO">
+		INSERT INTO chatinfo
+		(senduser, chattext, chatdate, receiveuser)
+		VALUES (#{senduser},
+		#{chattext}, NOW(), "smhrd2")
+	</insert>
+
+	<select id="ReceiveChat" parameterType="String"
+		resultType="jisang.poyong.vo.ChatVO">
+		SELECT senduser, chattext, chatdate, receiveuser
+		FROM chatinfo
+		WHERE receiveuser = #{receiveuser}
+		ORDER BY chatdate ASC
+	</select>
+
+	<select id="LoadChat" parameterType="String"
+		resultType="jisang.poyong.vo.ChatVO">
+		SELECT senduser, chattext, chatdate, receiveuser
+		FROM chatinfo
+		WHERE (senduser = #{user} AND receiveuser = #{user})
+		OR (senduser = #{user} OR receiveuser = #{user})
+		ORDER BY chatdate ASC
+	</select>
+</mapper>

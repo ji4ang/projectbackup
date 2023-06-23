@@ -1,0 +1,412 @@
+:root {
+    --main-color: #3399ff;
+    --line-color: #c9c9c9;
+    --line-color2: #a9a9a9;
+    --line-color3: #e0e2e6;
+    --font-color: #333;
+    --font-color2: #555;
+    --font-color3: #666;
+    --font-color4: #777;
+    --scrollbar: #d8dbe2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+}
+
+
+/* 헤더 첫 번째 줄 (시작) */
+.nav1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .nav1_left, .nav1_center {
+    border-right: 1px solid #c9c9c9;
+} */
+
+.nav1_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav1_left a {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nav1_left a img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.nav1_center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1_center .search {
+    width: 380px;
+    height: 38px;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color2);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav1_center .search:focus {
+    border: 2px solid var(--main-color);
+    opacity: 0.6; /* 색상 투명도 조절 */
+}
+
+.nav1_center button {
+    position: absolute;
+    transform: translateX(1200%);
+    background-color: transparent;
+    border: none;
+}
+
+.nav1_center button:hover {
+    color: var(--main-color);
+}
+
+/* .nav1_center button:active {
+    color: var(--main-color);
+} */
+
+.nav1_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav1_right .link_wrap {
+    margin-right: 100px;
+}
+
+.nav1_right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav1_right a:hover {
+    color: var(--main-color);
+}
+
+.nav1_right .myPage {
+    color: var(--main-color);
+}
+/* 헤더 첫 번째 줄 (끝) */
+
+
+/* 헤더 두 번째 줄 (시작) */
+.nav2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px var(--line-color);
+    opacity: 0.8;
+}
+
+.nav2_left {
+    margin-left: 100px;
+}
+
+.nav2_left a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav2_left a:hover {
+    color: var(--main-color);
+}
+
+.nav2_right {
+    margin-right: 100px;
+}
+
+.nav2_right .customer {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav2_right .customer:hover {
+    color: var(--main-color);
+}
+/* 헤더 두 번째 줄 (끝) */
+
+
+/* 수정 부분 (시작) */
+.all {
+    width: 100%;
+    height: 390px;
+    display: flex;
+    justify-content: center;
+}
+
+.myinfo_wrap {
+    width: 1200px;
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.myinfo_wrap section {
+    width: 700px;
+    margin-left: 200px;
+    padding-block-start: 10px;
+    display: flex;
+    justify-content: flex-start;
+    border-top: 2px solid var(--line-color);
+    border-bottom: 2px solid var(--line-color);
+}
+
+.personal_info_wrap {
+    display: flex;
+    justify-content: center;
+}
+
+.personal_info_left, .personal_info_right {
+    flex: 1;
+}
+
+
+/* 개인정보 왼쪽 (시작) */
+.personal_info_left input {
+    height: 24px;
+    margin-right: 40px;
+    padding-left: 5px;
+    border: 1px solid var(--line-color2);
+    border-radius: 4px;
+    color: var(--font-color2);
+}
+
+.personal_info_left input:focus {
+    outline: 1px solid var(--main-color);
+}
+
+.personal_info_wrap {
+    height: 240px;
+}
+
+.personal_id, .personal_pw, .personal_email,
+.personal_name, .personal_birth, .personal_address,
+.personal_phone, .personal_parent, .personal_disorder {
+    height: 24px;
+    margin: 15px 0 15px 20px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+.id_title, .pw_title, .email_title,
+.name_title, .birth_title, .address_title,
+.phone_title, .parent_title, .disorder_title {
+    width: 120px;
+    letter-spacing: -2px;
+    color: var(--font-color3);
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.id_content, .pw_content, .email_content,
+.name_content, .birth_content, .address_content,
+.phone_content, .parent_content, .disorder_content {
+    margin-left: 10px;
+    font-size: 13px;
+    color: var(--font-color3);
+}
+
+.personal_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.personal_btn button {
+    width: 60px;
+    height: 30px;
+    margin-right: 10px;
+    background-color: var(--main-color);
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.personal_btn a {
+    width: 60px;
+    height: 30px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid var(--line-color2);
+    border-radius: 4px;
+    font-size: 14px;
+    color: var(--font-color);
+    text-decoration: none;
+}
+/* 개인정보 왼쪽 (끝) */
+
+
+/* 개인정보 오른쪽 (시작) */
+.personal_info_right input, .personal_info_right select {
+    height: 24px;
+    padding-left: 5px;
+    border: 1px solid var(--line-color2);
+    border-radius: 4px;
+    color: var(--font-color2);
+}
+
+.personal_info_right input:focus {
+    outline: 1px solid var(--main-color);
+}
+/* 개인정보 오른쪽 (끝) */
+
+/* 수정 부분 (끝) */
+
+
+/* 오른쪽 사이드 바 (시작) */
+.myinfo_wrap aside {
+    width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.myinfo_wrap aside .menu {
+    width: 80px;
+    height: 160px;
+    word-break: keep-all;
+    border: 2px solid var(--line-color);
+}
+
+.menu_top, .menu_bottom {
+    height: 50%;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+.menu_top {
+    border-bottom: 1px solid var(--line-color);
+}
+
+.menu_top a, .menu_bottom a {
+    padding: 0 5px;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color4);
+}
+
+.menu_top a:hover, .menu_bottom a:hover {
+    color: var(--main-color);
+}
+/* 오른쪽 사이드 바 (끝) */
+
+
+.job_summary {
+    width: 100%;
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.job_wrap {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.job_wrap2 {
+    margin-left: 200px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* 구직활동 요약표 (시작) */
+.summary_table {
+    width: 700px;
+    height: 100px;
+    background-color: #f3f5f7;
+    border: 1px solid var(--line-color);
+    border-collapse: collapse;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.summary_table td {
+    border: 1px solid var(--line-color);
+}
+
+.resume, .resume_see, .apply, .like_company {
+    width: 140px;
+}
+
+.count {
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: var(--font-color2);
+}
+
+.summary_title {
+    font-size: 15px;
+    color: var(--font-color3);
+}
+/* 구직활동 요약표 (끝) */
+
+
+/* 회원탈퇴 버튼 */
+.job_summary_btn {
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+}
+
+.out {
+    width: 100px;
+    height: 20px;
+    background-color: transparent;
+    color: var(--line-color);
+    border: none;
+    cursor: pointer;
+}

@@ -1,0 +1,564 @@
+:root {
+    --main-color: #3399ff;
+    --line-color: #c9c9c9;
+    --line-color2: #a9a9a9;
+    --line-color3: #e0e2e6;
+    --font-color: #333;
+    --font-color2: #555;
+    --font-color3: #666;
+    --font-color4: #777;
+    --scrollbar: #d8dbe2;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    /* border: 1px solid #a9a9a9; */
+}
+
+
+/* 헤더 첫 번째 줄 (시작) */
+.nav1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+.nav1_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav1_left a {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--font-color);
+}
+
+.nav1_left a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav1_center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1_center .search {
+    width: 380px;
+    height: 38px;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color2);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav1_center .search:focus {
+    border: 2px solid var(--main-color);
+    opacity: 0.6; /* 색상 투명도 조절 */
+}
+
+.nav1_center button {
+    position: absolute;
+    transform: translateX(1200%);
+    background-color: transparent;
+    border: none;
+}
+
+.nav1_center button:hover {
+    color: var(--main-color);
+}
+
+/* .nav1_center button:active {
+    color: var(--main-color);
+} */
+
+.nav1_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav1_right .link_wrap {
+    margin-right: 100px;
+}
+
+.nav1_right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+}
+
+.nav1_right a:hover {
+    color: var(--main-color);
+}
+/* 헤더 첫 번째 줄 (끝) */
+
+
+/* 헤더 두 번째 줄 (시작) */
+.nav2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px var(--line-color);
+    opacity: 0.8;
+}
+
+.nav2_left {
+    margin-left: 100px;
+}
+
+.nav2_left a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: var(--font-color);
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav2_left a:hover {
+    color: var(--main-color);
+}
+
+.nav2_left .hire {
+    color: var(--main-color);
+}
+
+.nav2_right {
+    margin-right: 100px;
+}
+
+.nav2_right .customer {
+    text-decoration: none;
+    font-size: 14px;
+    color: var(--font-color);
+}
+
+.nav2_right .customer:hover {
+    color: var(--main-color);
+}
+/* 헤더 두 번째 줄 (끝) */
+
+
+/* 본문 (시작) */
+
+/* 공고 상세 검색 폼 (시작) */
+.sortation {
+    background-color: #f3f5f7;
+    padding-bottom: 20px;
+}
+
+.container {
+    width: 100%;
+    padding: 0 100px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.hire_filter_wrap {
+    margin-top: 50px;
+}
+
+.hire_filter_wrap .hire_title {
+    margin-bottom: 30px;
+    font-size: 20px;
+    user-select: none;
+}
+
+.hire_filter {
+    width: 1160px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+}
+
+.area_wrap {
+    flex: 1;
+}
+
+.industry_wrap {
+    flex: 1;
+}
+
+.emply_wrap {
+    flex: 1;
+}
+
+.area_wrap, .industry_wrap, .emply_wrap {
+    border: 1px solid var(--line-color3);
+}
+
+.area_title, .industry_title, .emply_title {
+    height: 22%;
+    display: flex;
+    background-color: #f9fafc;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    color: var(--font-color2);
+    border-top: 1px solid var(--line-color);
+    border-bottom: 1px solid var(--line-color);
+    user-select: none;
+}
+
+.area_list, .industry_list {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+.area_list::-webkit-scrollbar, .industry_list::-webkit-scrollbar {
+    width: 7px;
+}
+
+.area_list::-webkit-scrollbar-track, .industry_list::-webkit-scrollbar-track {
+    background-color: transparent;
+    margin-right: 2px;
+}
+
+.area_list::-webkit-scrollbar-thumb, .industry_list::-webkit-scrollbar-thumb {
+    border-radius: 3px;
+    background-color: var(--scrollbar);
+}
+
+.area_list::-webkit-scrollbar-button, .industry_list::-webkit-scrollbar-button {
+    display: none;
+}
+
+.emply_list {
+    width: 100%;
+}
+
+.area_list, .industry_list, .emply_list {
+    height: 78%;
+    padding-top: 5px;
+    background-color: #fff;
+}
+
+.area_list div, .industry_list div, .emply_list div {
+    width: 50%;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+    font-size: 13px;
+    user-select: none;
+}
+
+.area_list div label, .industry_list div label, .emply_list div label {
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.area_list div:hover, .industry_list div:hover, .emply_list div:hover {
+    cursor: pointer;
+    color: var(--main-color);
+}
+/* 공고 상세 검색 폼 (끝) */
+
+
+/* 검색 전송 부분 (시작) */
+.hire_send {
+    width: 1160px;
+    margin-bottom: 50px;
+    background-color: #f9fafc;
+    border: 1px solid var(--line-color3);
+    border-bottom: 1px solid var(--line-color);
+}
+
+.hire_send form {
+    width: 100%;
+    padding: 10px 10px 10px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#tag_wrap {
+    width: 88%;
+    vertical-align: middle;
+    margin-block-end: 0.3em;
+}
+
+#tag_wrap > div {
+    cursor: pointer;
+}
+
+.hire_send_btn {
+    width: 12%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.hire_send_btn [type="reset"] {
+    border: none;
+    background-color: transparent;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.hire_send_btn [type="submit"] {
+    width: 50px;
+    height: 30px;
+    border: none;
+    background-color: var(--main-color);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+#tag_wrap div {
+    margin-right: 10px;
+    font-size: 13px;
+    color: var(--font-color2);
+}
+/* 검색 전송 부분 (끝) */
+
+
+/* 광고 (시작) */
+.ad {
+    margin-top: 106px;
+    user-select: none;
+}
+
+.ad img {
+    width: 110px;
+    height: 252px;                                                                            
+    /* user-select: none; */
+}
+/* 광고 (끝) */
+
+
+/* 기업 공고 (시작) */
+.announce_wrap {
+    margin: 50px 0 60px 100px;
+}
+
+#announce_filter {
+    width: 100px;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 30px;
+    border: none;
+    outline: none;
+}
+
+.announce_wrap .announce_list {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.announce_wrap ul li {
+    width: 246px;
+    height: 120px;
+    margin: 0 20px 20px 0;
+    border: 1px solid var(--line-color);
+    background-color: #fff;
+    padding: 0 15px;
+    padding-block-start: 0.3em;
+    /* padding-block-end: 0.3em; */
+}
+
+.announce_wrap ul li:hover {
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+}
+/* 
+.announce_wrap ul li a div {
+	text-decoration: none;
+}
+ */
+.announce_title, .announce_content, .announce_bottom {
+    display: flex;
+    align-items: center;
+    /* border: 1px solid #c9c9c9; */
+}
+
+.announce_list {
+    flex-wrap: wrap;
+    display: flex;
+}
+
+.announce_title {
+    height: 30%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--font-color2);
+}
+
+.announce_content {
+    height: 45%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /* display: block; */
+    /* word-wrap: break-word; */
+    /* white-space: nowrap; */
+    /* line-height: 1.2; */
+    /* word-wrap: break-word; */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    font-size: 13px;
+    color: var(--font-color4);
+}
+
+.announce_bottom {
+    height: 25%;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #c9c9c9;
+}
+
+.announce_bottom .announce_date {
+    font-size: 12px;
+    color: var(--font-color3);
+}
+
+.bookmark .fa-star {
+    cursor: pointer;
+    font-size: 14px;
+}
+
+
+.bookmark .fa-star:nth-child(1) {
+    display: block;
+    color: var(--line-color2);
+}
+
+
+.bookmark .fa-star:nth-child(2) {
+    display: none;
+    color: var(--main-color);
+}
+/* 기업 공고 (끝) */
+
+/* 본문 (끝) */
+
+
+/* 최상단 이동 버튼 (시작) */
+#top_btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    right: 40px;
+    bottom: 50px;
+    text-align: center;
+    color: var(--font-color3);
+    text-decoration: none;
+    flex-wrap: nowrap;
+}
+
+#top_btn label {
+    cursor: pointer;
+}
+
+#top_btn label .fa-chevron-up {
+    width: 20px;
+    height: 20px;
+}
+/* 최상단 이동 버튼 (끝) */
+
+
+/* footer (시작) */
+footer {
+    background-color: #f3f5f7;
+    padding: 30px 0 30px 0;
+    text-align: center;
+    color: gray;
+    user-select: none;
+}
+
+.footer {
+    margin-bottom: 30px;
+    font-size: 13px;
+}
+
+.footer ul, li {
+    list-style: none;
+    display: inline-block;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    color: gray;
+}
+
+.footer ul li:nth-child(1)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;
+    margin: 0 15px 0 20px;
+}
+
+.footer ul li:nth-child(3)::before {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;
+    margin: 0 15px 0 20px;
+}
+
+.footer ul li:nth-child(3)::after {
+    content: "";
+    display: inline-block;
+    width: 1px;
+    height: 12px;
+    background-color: #d3d5d7;
+    margin: 0 15px 0 20px;
+}
+
+.copyright {
+    font-size: 12px;
+}
+/* footer (끝) */

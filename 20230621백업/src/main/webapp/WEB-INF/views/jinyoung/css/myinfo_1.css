@@ -1,0 +1,346 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #3399ff;
+    --line-color: #c9c9c9;
+    --line-color2: #a9a9a9;
+}
+
+header{
+    width: 100%;
+    height: 120px;
+    /* border: 1px solid #a9a9a9; */
+}
+
+
+/* 헤더 첫 번째 줄 (시작) */
+.nav1 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #ddd;
+}
+
+/* .nav1_left, .nav1_center {
+    border-right: 1px solid #c9c9c9;
+} */
+
+.nav1_left {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.nav1_left a {
+    display: flex;
+    align-items: center;
+    margin-left: 100px;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #555;
+}
+
+.nav1_left a img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.nav1_center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nav1_center .search {
+    width: 380px;
+    height: 38px;
+    padding-left: 15px;
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid var(--line-color2);
+    outline: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #000;
+}
+
+.nav1_center .search:focus {
+    border: 2px solid var(--main-color);
+    opacity: 0.6; /* 색상 투명도 조절 */
+}
+
+.nav1_center button {
+    position: absolute;
+    transform: translateX(1200%);
+    background-color: transparent;
+    border: none;
+}
+
+.nav1_center button:hover {
+    color: var(--main-color);
+}
+
+/* .nav1_center button:active {
+    color: var(--main-color);
+} */
+
+.nav1_right {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.nav1_right .link_wrap {
+    margin-right: 100px;
+}
+
+.nav1_right a {
+    margin-left: 20px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.nav1_right a:hover {
+    color: var(--main-color);
+}
+/* 헤더 첫 번째 줄 (끝) */
+
+
+/* 헤더 두 번째 줄 (시작) */
+.nav2 {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 3px 3px var(--line-color);
+    opacity: 0.8;
+}
+
+.nav2_left {
+    margin-left: 100px;
+}
+
+.nav2_left a {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.nav2_left a:hover {
+    color: var(--main-color);
+}
+
+.nav2_left .hire {
+    color: var(--main-color);
+}
+
+.nav2_right {
+    margin-right: 100px;
+}
+
+.nav2_right .customer {
+    text-decoration: none;
+    font-size: 14px;
+    color: #333;
+}
+
+.nav2_right .customer:hover {
+    color: var(--main-color);
+}
+/* 헤더 두 번째 줄 (끝) */
+
+.myinfo{
+    margin-left: 380px;
+    margin-top: 40px;
+}
+
+.edit_area{
+    border: none;
+    /* font-size: 30px; */
+    width: 400px;
+    height: 300px;
+}
+
+.edit_area tr {
+    height: 50px;
+}
+
+.edit_list{
+    font-weight: bold;
+    font-size: 16px;
+    vertical-align: middle;
+}
+
+.edit_pw{
+    width: 225px;
+    height: 30px;
+    padding-left: 10px;
+    /* border: solid 2px #c9c9c9; */
+    /* border: solid 1px; */
+}
+
+.edit_content .edit_pw:focus{
+    outline: solid 1px #c9c9c9;
+    opacity: 0.6;
+}
+
+.disability{
+    width: 225px;
+    height: 30px;
+    margin-left: -5px;
+}
+
+.edit_content{
+    color: #666;
+    font-size: 14px;
+    /* margin-left: 50px; */
+    vertical-align: middle;
+}
+
+.side{
+    text-align: right;
+}
+
+.side_menu{
+    float: right;
+    position: relative;
+    margin-top: -290px;
+    margin-right: 100px;
+    text-align: center;
+    border: solid 2px #c9c9c9;
+    height: 220px;
+    width: 100px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.side_menu #side_menu_content_2{
+    border-bottom: none;
+}
+
+.side_menu #side_menu_content:hover{
+    background-color: #3399ff;
+}
+
+.side_menu #side_menu_content_2:hover{
+    background-color: #3399ff;
+}
+
+
+#side_menu_content td{
+    border-bottom: solid 2px #c9c9c9;
+}
+
+.edit_btn{
+    background-color: #3399ff;
+    color: white;
+    position: absolute;
+    right: 367px;
+    height: 35px;
+    width: 55px;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transform: translatey(-44.1px);
+}
+
+.cancle_btn{
+    background-color: white;
+    color: black;
+    position: absolute;
+    height: 35px;
+    width: 55px;
+    border: solid 1.5px #c9c9c9;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 3px;
+    cursor: pointer;
+    transform: translate3d(660px, -44px, 10px);
+}
+
+.out{
+    color: #c9c9c9;
+    border: solid black 1px;
+    /* float: right; */
+    height: 20px;
+    width: 100px;
+    margin-right: 80px;
+    transform: translatey(170px);
+    border: none;
+    background-color: white;
+    cursor: pointer;
+}
+
+/* 구직활동요약표 */
+.job_summary{
+    display: flex;
+    justify-content: center;
+    /* margin-bottom: 50px; */
+    height: 165px;
+}
+
+.summary_table{
+    border-top: solid 2px #c9c9c9;
+    border-left: solid 2px #c9c9c9;
+    border-bottom: solid 2px #c9c9c9;
+    text-align: center;
+    width: 800px;
+    height: 115px;
+    margin-top: 30px;
+    vertical-align: middle;
+    background-color: whitesmoke;
+    cursor: pointer;
+}
+
+.resume{
+    width: 200px;
+}
+
+.resume_see{
+    width: 200px;
+}
+
+.apply{
+    width: 200px;
+}
+
+.like_company{
+    width: 200px;
+}
+
+.count{
+    font-size: 33px;
+    color: black;
+}
+
+.summary_table{
+    color: gray;
+}
+
+.summary{
+    margin-top: 10px;
+    vertical-align: middle;
+}
+
+.summary_table td{
+    border-right: solid 2px #c9c9c9;
+}

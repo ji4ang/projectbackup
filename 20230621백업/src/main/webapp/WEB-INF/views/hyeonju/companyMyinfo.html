@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>포용취업넷</title>
+<link rel="stylesheet" href="css/companyMyinfo.css">
+</head>
+
+<body>
+	<header>
+		<!-- 헤더 첫 번째 줄 (시작)-->
+		<div class="nav1">
+			<div class="nav1_left">
+				<a href="#"> <!-- 메인페이지 링크 --> <img src="img/logo.png"
+					alt="logo">포용취업넷
+				</a>
+			</div>
+
+			<div class="nav1_center">
+				<input type="text" class="search">
+				<button>
+					<i class="fa-solid fa-magnifying-glass"></i>
+				</button>
+			</div>
+
+			<div class="nav1_right">
+				<div class="link_wrap">
+					<!-- 로그인 전에는 "로그인, 회원가입" 버튼만 보이게, 나머지는 숨김 처리 -->
+					<a href="SignIn.html">로그인</a> <a href="SignUp.html">회원가입</a>
+					<!-- 로그인 후에는 "쪽지함, 내정보, 로그아웃" 버튼만 보이게, 나머지는 숨김 처리 -->
+					<a href="message.html" class="message">쪽지함</a> <a
+						href="userMyinfo.html" class="myPage">내정보</a> <a
+						href="companyMyinfo.html" class="myPage">내정보</a> <a href="#"
+						class="logout">로그아웃</a>
+				</div>
+			</div>
+		</div>
+		<!-- 헤더 첫 번째 줄 (끝) -->
+
+
+		<!-- 헤더 두 번째 줄 (시작) -->
+		<div class="nav2">
+			<div class="nav2_left">
+				<a href="index.html" class="hire">채용정보</a> <a href="#">취업 분포도</a> <a
+					href="#">직업·진로</a> <a href="#">이력서 작성</a> <a href="#">공고글 작성</a>
+			</div>
+
+			<div class="nav2_right">
+				<a href="#" class="customer">고객센터</a>
+				<!-- 고객센터 페이지 링크 -->
+			</div>
+		</div>
+		<!-- 헤더 두 번째 줄 (끝) -->
+	</header>
+
+	<!-- 전체를 감싼 부분 (시작) -->
+	<div class="all">
+
+		<div class="myinfo_wrap">
+			<!-- 내정보 수정 (시작) -->
+			<section>
+				<!-- 개인정보 수정 (시작) -->
+				<form action="#" method="#" class="personal">
+					<div class="personal_info">
+						<div class="personal_id">
+							<div class="id_title">아이디</div>
+							<div class="id_content">아이디 값</div>
+						</div>
+
+						<div class="personal_pw">
+							<div class="pw_title">비밀번호</div>
+							<div class="pw_content">비밀번호 값</div>
+						</div>
+
+						<div class="personal_email">
+							<div class="email_title">이메일</div>
+							<div class="email_content">이메일 값</div>
+						</div>
+
+						<div class="personal_name">
+							<div class="name_title">이름</div>
+							<div class="name_content">이름 값</div>
+						</div>
+
+						<div class="personal_phone">
+							<div class="phone_title">전화번호</div>
+							<div class="phone_content">전화번호 값</div>
+						</div>
+
+						<div class="personal_number">
+							<div class="number_title">사업자 번호</div>
+							<div class="number_content">사업자 번호 값</div>
+						</div>
+					</div>
+
+					<div class="personal_btn">
+						<a href="companyEdit.html">수정</a>
+					</div>
+				</form>
+				<!-- 개인정보 수정 (끝) -->
+
+
+				<!-- 기업정보 수정 (시작) -->
+				<form action="#" method="#" class="company">
+					<div class="company_info">
+						<div class="company_name">
+							<div class="company_title">회사명</div>
+							<div class="company_content">회사명 값</div>
+						</div>
+
+						<div class="company_boss">
+							<div class="boss_title">대표명</div>
+							<div class="boss_content">대표명 값</div>
+						</div>
+
+						<div class="company_employee">
+							<div class="employee_title">직원수</div>
+							<div class="employee_content">직원수 값</div>
+						</div>
+
+						<div class="company_type">
+							<div class="type_title">사업체 직군</div>
+							<div class="type_content">직군 값</div>
+						</div>
+
+						<div class="company_address">
+							<div class="address_title">사업체 주소</div>
+							<div class="address_content">주소 값</div>
+						</div>
+					</div>
+
+					<div class="company_btn">
+						<a href="companyEdit.html">수정</a>
+					</div>
+				</form>
+				<!-- 기업정보 수정 (끝) -->
+			</section>
+			<!-- 내정보 수정 (끝) -->
+
+
+			<!-- 오른쪽 사이드 바 (시작) -->
+			<aside>
+				<div class="menu">
+					<div class="menu_top">
+						<a href="resume.html">이력서 수정</a>
+					</div>
+					<div class="menu_bottom">
+						<a href="service.html">문의·신고 내역</a>
+					</div>
+				</div>
+			</aside>
+			<!-- 오른쪽 사이드 바 (끝) -->
+		</div>
+	</div>
+
+
+	<div class="hire_summary">
+		<div class="hire_wrap">
+			<div class="hire_wrap2">
+				<!-- 구직활동 요약표 (시작) -->
+				<table class="summary_table">
+					<tr class="summary">
+						<td class="imploy_notice">
+							<p class="count">1</p>
+							<p class="summary_title">진행중 공고</p>
+						</td>
+						<td class="notsee_resume">
+							<p class="count">1</p>
+							<p class="summary_title">미열람 이력서</p>
+						</td>
+						<td class="applyer">
+							<p class="count">1</p>
+							<p class="summary_title">지원자</p>
+						</td>
+						<td class="paper">
+							<p class="count">1</p>
+							<p class="summary_title">서류/면접중</p>
+						</td>
+					</tr>
+				</table>
+				<!-- 구직활동 요약표 (끝) -->
+			</div>
+
+			<div class="hire_summary_btn">
+				<button class="out">회원탈퇴</button>
+			</div>
+		</div>
+	</div>
+
+
+	<script src="https://kit.fontawesome.com/d18a01d55c.js"
+		crossorigin="anonymous"></script>
+	<script src="js/companyEdit.js"></script>
+</body>
+
+</html>

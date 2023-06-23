@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jisang.poyong.mapper.UserMapper">
+	<!-- 유저 회원가입 -->
+	<insert id="UserSignUp" parameterType="jisang.poyong.vo.UserVO">
+		insert into userinfo
+		values(
+		#{userid},
+		#{userpw},
+		#{username},
+		#{useremail},
+		#{userphone},
+		#{userdiv},
+		#{userobstccode},
+		'값을 입력해주세요',
+		'', '값을 입력해주세요','값을 입력해주세요')
+	</insert>
+
+	<insert id="BusinessSignUp"
+		parameterType="jisang.poyong.vo.UserVO">
+		insert into userinfo
+		values(
+		#{userid},
+		#{userpw},
+		#{username},
+		#{useremail},
+		#{userphone},
+		"B",
+		'',
+		'',
+		#{businessidx},'','')
+	</insert>
+
+	<insert id="CompanyInsert"
+		parameterType="jisang.poyong.vo.BusinessVO">
+		INSERT INTO businessinfo
+		VALUES
+		(#{userid}, #{businessidx},'값을 입력해주세요','값을 입력해주세요','0','값을 입력해주세요','값을 입력해주세요')
+	</insert>
+
+	<!-- 로그인 -->
+	<select id="SignIn" resultType="jisang.poyong.vo.UserVO">
+		select *
+		from userinfo
+		where userid
+		= #{userid}
+		and userpw = #{userpw}
+		and userdiv = #{userdiv}
+	</select>
+
+	<!-- 사용자 정보 업데이트 쿼리 -->
+	<update id="UpdateUser" parameterType="jisang.poyong.vo.UserVO">
+		UPDATE userinfo
+		SET
+		userpw = #{userpw},
+		userphone = #{userphone},
+		useremail = #{useremail},
+		userbirth = #{userbirth},
+		useraddress = #{useraddress},
+		userobstccode = #{userobstccode},
+		userparentphone = #{userparentphone}
+		WHERE userid = #{userid}
+	</update>
+
+	<update id="UpdateCompany"
+		parameterType="jisang.poyong.vo.UserVO">
+		UPDATE userinfo
+		SET
+		userpw = #{userpw},
+		userphone =	#{userphone},
+		useremail = #{useremail},
+		businessidx = #{businessidx}
+		WHERE userid = #{userid}
+	</update>
+	
+	<update id="BusinessUpdate"
+		parameterType="jisang.poyong.vo.BusinessVO">
+		UPDATE businessinfo
+		SET
+		businessname = #{businessname},
+		businessboss =	#{businessboss},
+		businessmember = #{businessmember},
+		businesscode = #{businesscode},
+		companyaddress = #{companyaddress}
+		WHERE userid = #{userid}
+	</update>
+
+</mapper>

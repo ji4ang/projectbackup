@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preference_test</title>
+    <link rel="stylesheet" href="preference_check.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <header>
+        <!-- 헤더 첫 번째 줄 (시작)-->
+        <div class="nav1">
+            <div class="nav1_left">
+                <a href="#"> <!-- 메인페이지 링크 -->
+                    <img src="img/logo.png" alt="logo">포용취업넷
+                </a>
+            </div>
+
+            <div class="nav1_center">
+                <input type="text" class="search">
+                <button><i class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+            
+            <div class="nav1_right">
+                <div class="link_wrap">
+                    <!-- 로그인 전에는 "로그인, 회원가입" 버튼만 보이게, 나머지는 숨김 처리 -->
+                    <a href="SignIn.html">로그인</a>
+                    <a href="SignUp.html">회원가입</a>
+                    <!-- 로그인 후에는 "쪽지함, 내정보, 로그아웃" 버튼만 보이게, 나머지는 숨김 처리 -->
+                    <a href="#" class="message">쪽지함</a>
+                    <a href="#" class="myPage">내정보</a>
+                    <a href="#" class="logout">로그아웃</a>
+                </div>
+            </div>
+        </div>
+        <!-- 헤더 첫 번째 줄 (끝) -->
+
+        <!-- 헤더 두 번째 줄 (시작) -->
+        <div class="nav2">
+            <div class="nav2_left">
+                <a href="#" class="hire">채용정보</a>
+                <a href="#">취업 분포도</a>
+                <a href="#">직업·진로</a>
+                <a href="#">이력서 작성</a>
+            </div>
+
+            <div class="nav2_right">
+                <a href="#" class="customer">고객센터</a><!-- 고객센터 페이지 링크 -->
+            </div>
+        </div>
+        <!-- 헤더 두 번째 줄 (끝) -->
+    </header>
+
+    <div class="preference_test_wrapper">
+        <div class="preference_test_subwrapper">
+            <!-- 맨 위에 있는 타이틀 -->
+            <h2 class="test_title">직업 선호도 검사</h2>
+            <div class="preference_test_area">
+                <!-- 진행률 바 -->
+                <div class="progress">
+                    <span id="progress_value">0</span>&nbsp;
+                    <progress id="progress_bar" value="0" min="0" max="100"></progress>
+                </div>
+                
+                <!-- 문항 -->
+                <form method="get">
+                    <div class="question_wrapper_0">
+                        <div class="questions">
+                            <h2>성별을 입력해주세요.</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>남</h3>
+                            <input type="radio" name='ans_0_1' id="very_yes" value="#">
+                            <input type="radio" name='ans_0_1' id="very_no" value="#">
+                            <h3>여</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>나이(15~29/30~39/40~49/50~59/60~69)</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>15 ~ 29</h3>
+                            <input type="radio" name='ans_0_2' id="very_yes" value="#">
+                            <input type="radio" name='ans_0_2' id="yes" value="#">
+                            <input type="radio" name='ans_0_2' id="soso" value="#">
+                            <input type="radio" name='ans_0_2' id="no" value="#">
+                            <input type="radio" name='ans_0_2' id="very_no" value="#">
+                            <h3>60 ~ 69</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>학력(중졸이하/고졸/대졸이상)</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>중졸이하</h3>
+                            <input type="radio" name='ans_0_3' id="very_yes" value="#">
+                            <input type="radio" name='ans_0_3' id="soso" value="#">
+                            <input type="radio" name='ans_0_3' id="very_no" value="#">
+                            <h3>대졸이상</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>장애정도를 입력해주세요.</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>경증</h3>
+                            <input type="radio" name='ans_0_4' id="very_yes" value="#">
+                            <input type="radio" name='ans_0_4' id="very_no" value="#">
+                            <h3>중증</h3>
+                        </div>
+                        <div class="move_button">
+                            <button class="next_1" type="button">다음</button>
+                        </div>
+                    </div>
+                    <div class="question_wrapper">
+                        <div class="questions">
+                            <h2>그림 그리는 것을 좋아한다.</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans' id="very_yes" value="#">
+                            <input type="radio" name='ans' id="yes" value="#">
+                            <input type="radio" name='ans' id="soso" value="#">
+                            <input type="radio" name='ans' id="no" value="#">
+                            <input type="radio" name='ans' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>책 읽는 것을 좋아한다.</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_2' id="very_yes" value="#">
+                            <input type="radio" name='ans_2' id="yes" value="#">
+                            <input type="radio" name='ans_2' id="soso" value="#">
+                            <input type="radio" name='ans_2' id="no" value="#">
+                            <input type="radio" name='ans_2' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q3</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_3' id="very_yes" value="#">
+                            <input type="radio" name='ans_3' id="yes" value="#">
+                            <input type="radio" name='ans_3' id="soso" value="#">
+                            <input type="radio" name='ans_3' id="no" value="#">
+                            <input type="radio" name='ans_3' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q4</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_4' id="very_yes" value="#">
+                            <input type="radio" name='ans_4' id="yes" value="#">
+                            <input type="radio" name='ans_4' id="soso" value="#">
+                            <input type="radio" name='ans_4' id="no" value="#">
+                            <input type="radio" name='ans_4' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q5</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_5' id="very_yes" value="#">
+                            <input type="radio" name='ans_5' id="yes" value="#">
+                            <input type="radio" name='ans_5' id="soso" value="#">
+                            <input type="radio" name='ans_5' id="no" value="#">
+                            <input type="radio" name='ans_5' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q6</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_6' id="very_yes" value="#">
+                            <input type="radio" name='ans_6' id="yes" value="#">
+                            <input type="radio" name='ans_6' id="soso" value="#">
+                            <input type="radio" name='ans_6' id="no" value="#">
+                            <input type="radio" name='ans_6' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <!-- 페이지 이동 버튼 -->
+                        <div class="move_button" type="button">
+                            <button class="back">이전</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="next_2" type="button">다음</button>
+                        </div>
+                    </div>
+
+                    <div class="question_wrapper_2">
+                        <div class="questions">
+                            <h2>Q7</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_7' id="very_yes" value="#">
+                            <input type="radio" name='ans_7' id="yes" value="#">
+                            <input type="radio" name='ans_7' id="soso" value="#">
+                            <input type="radio" name='ans_7' id="no" value="#">
+                            <input type="radio" name='ans_7' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q8</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_8' id="very_yes" value="#">
+                            <input type="radio" name='ans_8' id="yes" value="#">
+                            <input type="radio" name='ans_8' id="soso" value="#">
+                            <input type="radio" name='ans_8' id="no" value="#">
+                            <input type="radio" name='ans_8' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q9</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_9' id="very_yes" value="#">
+                            <input type="radio" name='ans_9' id="yes" value="#">
+                            <input type="radio" name='ans_9' id="soso" value="#">
+                            <input type="radio" name='ans_9' id="no" value="#">
+                            <input type="radio" name='ans_9' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q10</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_10' id="very_yes" value="#">
+                            <input type="radio" name='ans_10' id="yes" value="#">
+                            <input type="radio" name='ans_10' id="soso" value="#">
+                            <input type="radio" name='ans_10' id="no" value="#">
+                            <input type="radio" name='ans_10' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q11</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_11' id="very_yes" value="#">
+                            <input type="radio" name='ans_11' id="yes" value="#">
+                            <input type="radio" name='ans_11' id="soso" value="#">
+                            <input type="radio" name='ans_11' id="no" value="#">
+                            <input type="radio" name='ans_11' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q12</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_12' id="very_yes" value="#">
+                            <input type="radio" name='ans_12' id="yes" value="#">
+                            <input type="radio" name='ans_12' id="soso" value="#">
+                            <input type="radio" name='ans_12' id="no" value="#">
+                            <input type="radio" name='ans_12' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <div class="questions">
+                            <h2>Q13</h2>
+                        </div>
+                        <div class="answer">
+                            <h3>예</h3>
+                            <input type="radio" name='ans_13' id="very_yes" value="#">
+                            <input type="radio" name='ans_13' id="yes" value="#">
+                            <input type="radio" name='ans_13' id="soso" value="#">
+                            <input type="radio" name='ans_13' id="no" value="#">
+                            <input type="radio" name='ans_13' id="very_no" value="#">
+                            <h3>아니오</h3>
+                        </div>
+                        <!-- 페이지 이동 버튼 -->
+                        <div class="move_button">
+                            <button class="back_2" type="button">이전</button>
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <button class="next_3" type="submit">제출</button>
+                        </div>    
+                    </div>
+                </form>
+            </div>
+            
+            </div>
+        </div>
+
+    <!-- <script src="preference_test.js"></script> -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+    $('.question_wrapper_0').show(); //페이지를 로드할 때 표시할 요소
+    $('.question_wrapper').hide(); //페이지를 로드할 때 숨길 요소
+    $('.question_wrapper_2').hide(); //페이지를 로드할 때 숨길 요소
+    
+    $('.next_1').click(function(){
+    $ ('.question_wrapper_0').hide(); //클릭 시 첫 번째 요소 숨김
+    $ ('.question_wrapper').show(); //클릭 시 두 번째 요소 표시
+    $ ('.question_wrapper_2').hide(); //클릭 시 세 번째 요소 숨김
+    
+    $('.next_2').click(function(){
+    $ ('.question_wrapper_0').hide(); //클릭 시 첫 번째 요소 숨김
+    $ ('.question_wrapper').hide(); //클릭 시 두 번째 요소 숨김
+    $ ('.question_wrapper_2').show(); //클릭 시 세 번째 요소 표시
+})
+    $('.back').click(function(){
+    $ ('.question_wrapper').hide();
+    $ ('.question_wrapper_0').show();
+})
+    $('.back_2').click(function(){
+    $ ('.question_wrapper_2').hide();
+    $ ('.question_wrapper').show();
+    })
+    
+    return false;
+    });
+    });
+
+    // 다음 버튼 클릭 시
+    document.querySelector(".next_1").addEventListener("click", function() {
+        var progressBar = document.getElementById("progress_bar");
+        var progressValue = document.getElementById("progress_value");
+        var currentValue = parseInt(progressBar.value);
+        var minValue = parseInt(progressBar.min);
+        var maxValue = parseInt(progressBar.max);
+        
+        // progress 값 증가
+        progressBar.value = Math.min(currentValue + 34, maxValue);
+        progressValue.textContent = progressBar.value;
+    });
+
+    document.querySelector(".next_2").addEventListener("click", function() {
+        var progressBar = document.getElementById("progress_bar");
+        var progressValue = document.getElementById("progress_value");
+        var currentValue = parseInt(progressBar.value);
+        var minValue = parseInt(progressBar.min);
+        var maxValue = parseInt(progressBar.max);
+        
+        // progress 값 증가
+        progressBar.value = Math.min(currentValue + 34, maxValue);
+        progressValue.textContent = progressBar.value;
+    });
+
+    document.querySelector(".next_3").addEventListener("click", function() {
+        var progressBar = document.getElementById("progress_bar");
+        var progressValue = document.getElementById("progress_value");
+        var currentValue = parseInt(progressBar.value);
+        var minValue = parseInt(progressBar.min);
+        var maxValue = parseInt(progressBar.max);
+        
+        // progress 값 증가
+        progressBar.value = Math.min(currentValue + 34, maxValue);
+        progressValue.textContent = progressBar.value;
+    });
+
+    // 이전 버튼 클릭 시
+    document.querySelector(".back").addEventListener("click", function() {
+        var progressBar = document.getElementById("progress_bar");
+        var progressValue = document.getElementById("progress_value");
+        var currentValue = parseInt(progressBar.value);
+        var minValue = parseInt(progressBar.min);
+        var maxValue = parseInt(progressBar.max);
+        
+        // progress 값 감소
+        progressBar.value = Math.max(currentValue - 34, minValue);
+        progressValue.textContent = progressBar.value;
+    });
+    </script>
+    
+</body>
+</html>

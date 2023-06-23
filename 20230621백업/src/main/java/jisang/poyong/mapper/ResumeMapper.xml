@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="jisang.poyong.mapper.ResumeMapper">
+
+	<!-- insertUser 메서드: UserVO 객체를 resumeinfo 테이블에 추가 -->
+	<insert id="insertResume"
+		parameterType="jisang.poyong.vo.ResumeVO">
+		INSERT INTO resumeinfo (
+		userid, username, useraddress, useremail,
+		userobstccode, userphone,
+		userbirth,
+		edustart1, eduend1, schoolname1,
+		major1, grade1,
+		edustart2, eduend2, schoolname2, major2, grade2,
+		edustart3, eduend3, schoolname3, major3, grade3,
+		graduated1,
+		graduated2, graduated3,
+		carrerstart1, carrerend1, companyname1,
+		position1,
+		carrerstart2, carrerend2, companyname2, position2,
+		carrerstart3, carrerend3, companyname3, position3,
+		jobcode,
+		worklocation, employmenttype,
+		employment1, employment2, employment3
+		)
+		VALUES (
+		#{userid}, #{username}, #{useraddress}, #{useremail},
+		#{userobstccode},
+		#{userphone}, #{userbirth},
+		#{edustart1}, #{eduend1},
+		#{schoolname1}, #{major1}, #{grade1},
+		#{edustart2}, #{eduend2},
+		#{schoolname2}, #{major2}, #{grade2},
+		#{edustart3}, #{eduend3},
+		#{schoolname3}, #{major3}, #{grade3},
+		#{graduated1}, #{graduated2},
+		#{graduated3},
+		#{carrerstart1}, #{carrerend1}, #{companyname1},
+		#{position1},
+		#{carrerstart2}, #{carrerend2}, #{companyname2},
+		#{position2},
+		#{carrerstart3}, #{carrerend3}, #{companyname3},
+		#{position3},
+		#{jobcode}, #{worklocation}, #{employmenttype},
+		#{employment1}, #{employment2}, #{employment3}
+		)
+	</insert>
+	
+	
+	<select id="ResumeResult" resultType="jisang.poyong.vo.ResumeVO">
+        SELECT * FROM resumeinfo
+    </select>
+</mapper>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="jisang.poyong.mapper.SurveyMapper">
+    
+    
+    <select id="surveylist" resultType="jisang.poyong.vo.Survey_VO">
+        select * from survey
+    </select>
+    
+    <insert id="surveyinsert" parameterType="jisang.poyong.vo.SurveyresultVO">
+        insert into surveyresult(
+        userid,
+        gender,
+        age,
+        education,
+        obstccode,
+        obstccentury,
+        surveyselectone,
+        surveyselecttwo,
+        surveyselectthree,
+        surveyselectfour,
+        surveyselectfive,
+        surveyselectsix,
+        surveyselectseven,
+        surveyselecteight,
+        surveyselectnine,
+        surveyselectten,
+        surveyselecteleven,
+        surveyselecttwelve,
+        surveyselectthirteen        
+        ) 
+        values(
+        #{userid},
+        #{gender},
+        #{age},
+        #{education},
+        #{obstccode},
+        #{obstccentury},
+        #{surveyselectone},
+        #{surveyselecttwo},
+        #{surveyselectthree},
+        #{surveyselectfour},
+        #{surveyselectfive},
+        #{surveyselectsix},
+        #{surveyselectseven},
+        #{surveyselecteight},
+        #{surveyselectnine},
+        #{surveyselectten},
+        #{surveyselecteleven},
+        #{surveyselecttwelve},
+        #{surveyselectthirteen}
+        )
+    </insert>
+    
+    
+<!--     <parameterMap type="java.util.List" id="companyaddress">
+        <parameter property=""/>
+    </parameterMap> -->
+    
+<select id="noticesearch" resultType="jisang.poyong.vo.NoticeVO" parameterType="java.util.HashMap">
+    <!-- 쿼리 내에서 HashMap의 키를 사용하여 데이터에 접근 -->
+    SELECT *
+    FROM noticeinfo
+    <where>
+        <foreach item="address" collection="companyaddress" separator=" OR " open="(" close=")">
+            companyaddress LIKE CONCAT('%', #{address}, '%')
+        </foreach>
+        <foreach item="code" collection="noticejobcode" separator=" OR " open=" AND (" close=")">
+            noticejobcode = #{code}
+        </foreach>
+        <foreach item="emp" collection="noticeemp" separator=" OR " open=" AND (" close=")">
+            noticeemp = #{emp}
+        </foreach>
+    </where>
+</select>
+        
+    
+    
+    
+</mapper>
